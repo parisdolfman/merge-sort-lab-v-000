@@ -21,12 +21,13 @@
 
 
 function mergeSort(array) {
-  let midpoint = array.length/2
+  let midpoint = array.length / 2
   let firstHalf = array.slice(0, midpoint)
   let secondHalf = array.slice(midpoint, array.length)
+  let sorted;
   if (array.length < 2) {
     return array
   } else {
-    merge(mergeSort(firstHalf), mergeSort(secondHalf))
+    sorted = merge(mergeSort(firstHalf), mergeSort(secondHalf))
   }
 }
